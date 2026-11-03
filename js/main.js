@@ -71,10 +71,8 @@
   var lbCount = lb.querySelector('.lb__count');
   var group = [], cur = 0, label = '';
 
-  // 拡大表示の画像: スマホでは軽い1200px版を使う
   function fullSrc(img) {
-    var src = img.getAttribute('src');
-    return window.innerWidth <= 700 ? src.replace('-1920.', '-1200.') : src;
+    return img.getAttribute('src');
   }
   function preload(i) {
     var n = group[(i + group.length) % group.length];
